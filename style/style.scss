@@ -572,18 +572,16 @@ body {
     }
 }
 
-.mobile {
-    background-image: url(../img/bg-article.jpg);
-    width: 100%;
-    height: 700px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    &-section { 
-        position: absolute;
-        top: 200px;
-        left: 800px;
-        width: 700px;
+.wrp {
+    width: 1232px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 80px;
+    &-section{
+        padding: 110px 0 0 30px;
+        width: 660px;
         & span {
             font-size: 30px;
             font-weight: 600;
@@ -593,7 +591,68 @@ body {
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
             line-height: 1.8;
+            margin: 40px 0 40px 0;
+        }
+        & ul {
+            list-style-type: none;
+            line-height: 1.9;
+            padding-left: 100px;
+            & li {
+                position: relative;
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background-color: #c7b299;
+                    position: absolute;
+                    top: 3px;
+                    left: -50px;
+                }
+            }
+        }
+    }
+}
 
+.statistics {
+    background: rgb(35,28,26);
+    background: linear-gradient(90deg, rgba(35,28,26,1) 0%, rgba(53,38,31,1) 38%, rgba(72,48,37,1) 100%);
+    &-item {
+        width: 1232px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+        display: flex;
+        padding: 70px 60px 40px 60px;
+        justify-content: space-around;
+        &-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 35px;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                bottom: -28px;
+            }
+            & span:nth-child(2) {
+                font-size: 48px;
+                color: white;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                font-family: 'Montserrat', sans-serif;
+            }
+            & span:nth-child(3) {
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
+                color: $brown-light;
+            }
         }
     }
 }
