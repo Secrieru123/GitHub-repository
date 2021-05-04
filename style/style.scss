@@ -524,7 +524,7 @@ body {
 }
 
 
-.video {
+.video-container {
     position: relative;
     margin: 0 auto;
     align-items: center;
@@ -620,11 +620,9 @@ body {
     background: linear-gradient(90deg, rgba(35,28,26,1) 0%, rgba(53,38,31,1) 38%, rgba(72,48,37,1) 100%);
     &-item {
         width: 1232px;
-        padding-left: 15px;
-        padding-right: 15px;
         margin: 0 auto;
         display: flex;
-        padding: 70px 60px 40px 60px;
+        padding: 70px 60px 90px 60px;
         justify-content: space-around;
         &-items {
             display: flex;
@@ -652,6 +650,69 @@ body {
                 font-family: 'Montserrat', sans-serif;
                 text-transform: uppercase;
                 color: $brown-light;
+            }
+        }
+    }
+}
+
+.holder {
+    width: 1232px;
+    padding: 80px 15px 80px 15px;
+    margin: 0 auto;
+    &-text {
+        text-align: center;
+        color: $dark;
+        width: 715px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+        & span {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        & p {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+        }
+    }
+    &-posts {
+        display: flex;
+        &-date {
+            position: relative;
+            &-position {
+                position: absolute;
+                bottom: 250px;
+                left: 20px;
+                color: white;
+                text-align: center;
+                & span {
+                    display: block;
+                    width: 50px;
+                    height: 35px;
+                    box-sizing: border-box;
+                    padding: 0;
+                    background-color: #363636;
+                    font-size: 24px;
+                    font-family: 'Montserrat', sans-serif;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+
+                }
+                & p {
+                    margin: 0 auto;
+                    padding: 3px;
+                    box-sizing: border-box;
+                    width: 50px;
+                    height: 25px;
+                    display: block;
+                    background-color: #252525;
+                    border-bottom-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    font-size: 15px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
             }
         }
     }
