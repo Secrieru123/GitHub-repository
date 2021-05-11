@@ -34,14 +34,15 @@ p {
     margin: 0 auto;
     align-items: center;
     display: flex;
+    justify-content: space-between;
 }
 
 .logo {
-    position: relative;
     color: white;
     fill: white;
     text-decoration: none;
     transition: 0.9s;
+    display: flex;
     &:hover {
         color: $brown;
         fill: $brown;
@@ -49,21 +50,17 @@ p {
     & span {
         font-size: 34px;
         font-weight: 400;
-        position: absolute;
-        bottom: 10px;
-        left: 74px;
+        margin-top: 10px;
     }
 }
 
 
 
 .nav {
-    width: 100%;
     display: flex; 
     list-style-type: none;  
-    padding-left: 0;
-    margin: 0px 67px 0 309px;
     font-weight: 600;
+    padding: 0;
     &-item {
         margin-left: 25px;
     }
@@ -603,21 +600,23 @@ p {
         }
         & ul {
             list-style-type: none;
-            line-height: 1.9;
             padding-left: 100px;
-            font-weight: 600;
             color: #949494;
             & li {
                 position: relative;
+                margin-bottom: 20px;
                 &::before {
-                    content: "";
+                    content: ">";
+                    box-sizing: border-box;
+                    padding-left: 7px;
+                    color: white;
                     display: block;
                     height: 20px;
                     width: 20px;
                     border-radius: 50%;
                     background-color: #c7b299;
                     position: absolute;
-                    top: 3px;
+                    top: -3px;
                     left: -50px;
                 }
             }
@@ -626,13 +625,13 @@ p {
 }
 
 .statistics {
-    background: rgb(35,28,26);
+  
     background: linear-gradient(90deg, rgba(35,28,26,1) 0%, rgba(53,38,31,1) 38%, rgba(72,48,37,1) 100%);
     &-item {
         width: 1232px;
         margin: 0 auto;
         display: flex;
-        padding: 70px 60px 90px 60px;
+        padding: 70px 0 90px 0;
         justify-content: space-around;
         font-weight: 600;
         &-items {
@@ -954,5 +953,36 @@ p {
             }
         }
 
+    }
+}
+@media (max-width: 1500px){
+    .slider-first {
+        display: none;
+    }
+    .slider-second {
+        display: none;
+    }
+}
+
+@media (max-width: 1370px){
+    .statistics-item {
+
+    }
+}
+@media (max-width: 1000px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        align-items: center;
+        text-align: center;
+    }
+    .content-items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content-item {
+        width: 300px;
     }
 }
