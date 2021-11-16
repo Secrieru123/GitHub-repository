@@ -1,5 +1,5 @@
 ## WAXOM Project
-**_I'm used_** 
+**I'm used** 
 **1.** HTML
 **2.** SASS
 **3.** SCSS
